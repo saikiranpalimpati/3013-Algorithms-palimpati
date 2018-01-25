@@ -1,3 +1,16 @@
+///////////////////////////////////////////////////////////////////////////////
+// Title: PRIORITY QUEUE
+
+// Files: main.cpp
+
+// Semester: (3013 Algorithms) Spring 2018
+
+// Author: (SAIKIRAN PALIMPATI)
+
+// Email: (palimpatisaikiran@yahoo.in)
+
+// Description: To add a method named orderedsert which would add an integer to list while maintaining ascending order.
+/////////////////////////////////////////////////////////////////////////////////
 #include <iostream>
 #include <ctime>
 
