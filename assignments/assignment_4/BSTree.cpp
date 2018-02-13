@@ -1,3 +1,17 @@
+///////////////////////////////////////////////////////////////////////////////
+// Title: FIX DELETE METHOD
+
+// Files: main.cpp, BSTree.cpp, BSTree.h
+
+// Semester: (3013 Algorithms) Spring 2018
+
+// Author: (SAIKIRAN PALIMPATI)
+
+// Email: (palimpatisaikiran@yahoo.in)
+
+// Description: fixed the delete method when it doesn't have a left or right child
+/////////////////////////////////////////////////////////////////////////////////
+
 #include "BSTree.h"
 
 BSTree::BSTree()
