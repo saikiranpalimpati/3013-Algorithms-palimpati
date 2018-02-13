@@ -70,7 +70,7 @@ int BSTree::count(node * root)
 		return 1 + count(root->left) + count(root->right);
 	}
 }
-
+//insering a node in the tree
 void BSTree::insert(node *& root, node *& temp)
 {
 	if (!root)
@@ -89,7 +89,7 @@ void BSTree::insert(node *& root, node *& temp)
 		}
 	}
 }
-
+//it prints the values in the tree
 void BSTree::print_node(node * n, string label)
 {
 	if (label != "")
@@ -114,7 +114,7 @@ void BSTree::print_node(node * n, string label)
 		cout << "\t\\-->[R][null]\n";
 	}
 }
-
+// finds the minimum value
 node * BSTree::minValueNode(node * root)
 {
 	node *current = root;
@@ -138,7 +138,7 @@ node * BSTree::minValueNode(node * root)
 
 	return current;
 }
-
+// deleting a key from the root
 node * BSTree::deleteNode(node *&root, int key)
 {
 	if (!root)
@@ -204,7 +204,7 @@ int BSTree::height(node * root)
 		}
 	}
 }
-
+/* Print nodes at a given level */
 void BSTree::printGivenLevel(node * root, int level)
 {
 	if (root == NULL)
@@ -219,7 +219,13 @@ void BSTree::printGivenLevel(node * root, int level)
 		printGivenLevel(root->right, level - 1);
 	}
 }
-
+//************************************************************************
+    // Method to help create GraphViz code so the expression tree can
+    // be visualized. This method prints out all the unique node id's
+    // by traversing the tree.
+    // Recivies a node pointer to root and performs a simple recursive
+    // tree traversal.
+    //************************************************************************
 void BSTree::GraphVizGetIds(node * nodePtr, ofstream & VizOut)
 {
 	static int NullCount = 0;
@@ -246,7 +252,12 @@ void BSTree::GraphVizGetIds(node * nodePtr, ofstream & VizOut)
 		}
 	}
 }
-
+ //************************************************************************
+    // This method is partnered with the above method, but on this pass it
+    // writes out the actual data from each node.
+    // Don't worry about what this method and the above method do, just
+    // use the output as your told:)
+    //************************************************************************
 void BSTree::GraphVizMakeConnections(node * nodePtr, ofstream & VizOut)
 {
 	static int NullCount = 0;
@@ -280,7 +291,7 @@ void BSTree::GraphVizMakeConnections(node * nodePtr, ofstream & VizOut)
 
 
 
-
+/* Function to line by line print level order traversal a tree*/
 void BSTree::printLevelOrder()
 {
 	cout << "Begin Level Order===================\n";
@@ -293,7 +304,11 @@ void BSTree::printLevelOrder()
 	}
 	cout << "End Level Order===================\n";
 }
-
+ //************************************************************************
+    // Recieves a filename to place the GraphViz data into.
+    // It then calls the above two graphviz methods to create a data file
+    // that can be used to visualize your expression tree.
+    //************************************************************************
 void BSTree::GraphVizOut(string filename)
 {
 	ofstream VizOut;
