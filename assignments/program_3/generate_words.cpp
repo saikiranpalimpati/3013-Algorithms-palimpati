@@ -1,3 +1,7 @@
+//Name: Saikiran Palimpati
+//Date: 1/3/2018
+//Assignment: Program 3
+//Description: creating and generating tenthousand words using adjectives, nouns, verbs, adverbs, animals
 #include <iostream>
 #include <fstream>
 #include <vector>
